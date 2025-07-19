@@ -1,78 +1,96 @@
-Transform your data into actionable insights with powerful Excel-based analytics solutions
+# Excel Analytics Web Application
 
-Excel Analytics is a comprehensive toolkit that empowers users to perform advanced data analysis, create dynamic dashboards, and generate automated reports using Microsoft Excel. Whether you're a business analyst, financial professional, or data enthusiast, this project provides templates, tools, and methodologies to maximize your analytical capabilities.
-🚀 Features
-📊 Dashboard Templates
+A modern web application for Excel data visualization and analysis built with Next.js.
 
-Executive Summary Dashboard - High-level KPI overview
-Sales Performance Dashboard - Revenue, conversion, and pipeline tracking
-Financial Analysis Dashboard - P&L, cash flow, and budget variance
-HR Analytics Dashboard - Employee metrics and workforce insights
-Marketing ROI Dashboard - Campaign performance and attribution
+## 🚀 Features
 
-🔧 Analysis Tools
+- **User Authentication**: Secure login and registration using Clerk
+- **Excel File Upload**: Upload Excel files for analysis
+- **Dynamic Visualization**: Generate various chart types from your data
+- **Data Summary**: View statistical summaries of your data
+- **Interactive Dashboard**: Explore your data with an intuitive interface
+- **Dark/Light Mode**: Choose your preferred theme
 
-Data Cleaning Scripts - VBA macros for data preparation
-Statistical Analysis Templates - Regression, correlation, and forecasting
-Pivot Table Generators - Automated pivot creation with best practices
-Chart Automation - Dynamic chart generation based on data types
-Report Schedulers - Automated report generation and distribution
+## 📋 Prerequisites
 
-📈 Advanced Analytics
+- Node.js 18.x or later
+- npm or yarn package manager
+- Modern web browser
 
-Predictive Modeling - Forecasting and trend analysis
-Scenario Planning - What-if analysis and sensitivity testing
-Risk Assessment - Monte Carlo simulations and risk metrics
-Optimization Models - Linear programming and solver applications
-Time Series Analysis - Seasonal decomposition and trend identification
+## 🛠️ Installation
 
-📋 Prerequisites
-
-Microsoft Excel 2019 or later (Excel 365 recommended)
-Power Query (included in Excel 2016+)
-Power Pivot (available in Excel Professional Plus)
-VBA enabled for macro functionality
-Basic Excel knowledge (formulas, pivot tables, charts)
-
-🛠️ Installation
-Option 1: Quick Setup
-
-Download the latest release from Releases
-Extract the ZIP file to your desired location
-Open Excel_Analytics_Setup.xlsm and follow the installation wizard
-Enable macros when prompted
-
-Option 2: Manual Installation
-bash# Clone the repository
+1. Clone the repository
+```bash
 git clone https://github.com/yourusername/excel-analytics.git
+```
 
-# Navigate to the project directory
+2. Navigate to the project directory
+```bash
 cd excel-analytics
+```
 
-# Run the setup script (PowerShell)
-.\scripts\setup.ps1
-Option 3: Template-Only Installation
+3. Install dependencies
+```bash
+npm install
+# or
+yarn install
+```
 
-Navigate to the templates/ folder
-Copy desired templates to your Excel templates directory
-Access templates through Excel's File > New > Personal
+4. Set up environment variables
+Create a `.env` file in the root directory with the following variables:
+```
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+```
 
-🎯 Quick Start
-1. Create Your First Dashboard
-excel1. Open templates/dashboards/Sales_Dashboard_Template.xlsx
-2. Connect your data source (Data > Get Data)
-3. Refresh pivot tables (Data > Refresh All)
-4. Customize charts and KPIs as needed
-5. Save as .xlsm to preserve functionality
-2. Run Data Analysis
-excel1. Open your dataset in Excel
-2. Go to Add-ins > Excel Analytics
-3. Select analysis type (Descriptive, Regression, etc.)
-4. Choose data range and options
-5. Click "Run Analysis" to generate results
-3. Automate Reports
-excel1. Open tools/Report_Automation.xlsm
-2. Configure data sources and output settings
-3. Set up email distribution list
-4. Schedule automation (Windows Task Scheduler)
-5. Test run to verify functionality
+5. Run the development server
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+## 🎯 Quick Start
+
+1. **Register/Login**: Create an account or log in using the authentication system
+2. **Upload Excel File**: Use the file upload component to upload your Excel data
+3. **Select Data**: Choose which column to visualize
+4. **Choose Chart Type**: Select from various chart types (pie, bar, line, etc.)
+5. **Explore Data**: View the generated chart and data summary
+6. **Download Chart**: Save your visualization as a PNG image
+
+## 🔧 Technologies Used
+
+- **Next.js**: React framework for server-rendered applications
+- **React**: JavaScript library for building user interfaces
+- **Clerk**: Authentication and user management
+- **ECharts**: Powerful charting library
+- **TailwindCSS**: Utility-first CSS framework
+
+## 📦 Production Deployment
+
+To build the application for production:
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+Then start the production server:
+
+```bash
+npm start
+# or
+yarn start
+```
+
+## 🧪 Testing
+
+This project uses Jest for testing. Run tests with:
+
+```bash
+npm test
+# or
+yarn test
+```
